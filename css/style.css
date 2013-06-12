@@ -38,7 +38,7 @@ body{
 /*logo*/
 .logo{
 	margin:15px 5px 0 50px;	
-	background:url(/img/logo.png) no-repeat;
+	background:url(../img/logo.png) no-repeat;
 	height:65px;
 	width:400px;
 	position:fixed;
