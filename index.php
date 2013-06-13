@@ -25,7 +25,7 @@
 <!-- footer -->
 <?php include "public/footer.php";?>
 <!-- /footer -->
-
+test
 
 </body>
 </html>
