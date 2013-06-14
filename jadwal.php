@@ -1,7 +1,8 @@
-<!-- debug -->
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="../css/style.css"/>
-<!-- /debug -->
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
 $(document).ready(function() {
     $('#submit').click(function(event) {
@@ -10,7 +11,7 @@ $(document).ready(function() {
         event.preventDefault();
         $.ajax({
             type : "GET",
-            url:'http://www.situs.com/tiket.php',
+            url:'tiket.php',
             data: FormData,
             cache: false,
             dataType: "jsonp",
@@ -30,18 +31,56 @@ $(document).ready(function() {
     });
 });
 </script>
-<!-- header -->
-<div class="container">
-<div class="header">
-	
-    <div class="header-date"><?php echo date("l, d F Y");?></div>
-
-</div><!-- /.header -->
-
-<div class="header-content">
-	<div class="logo"></div>
-</div><!-- /.header-content -->
-
-</div><!-- /.container -->
-<!-- /header -->
-
+<form id="FormTiket" name="FormTiket">
+<table>
+    <tr>
+        <td>Kota Asal</td>
+        <td>:</td>
+        <td>
+        <select id="asal" name="asal">
+            <option value="CGK">Jakarta</option>
+            <option value="BTH">Batam</option>
+            <option value="DPS">Denpasar</option>
+         </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Kota Tujuan</td>
+        <td>:</td>
+        <td>
+        <select id="tujuan" name="tujuan">
+            <option value="DPS">Denpasar</option>
+            <option value="AMQ">Ambon</option>
+            <option value="BPN">Balikpapan</option>
+         </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Tanggal</td>
+        <td>:</td>
+        <td>
+        <select id="tanggal" name="tanggal">
+            <option value="2013-06-01">01-06-2013</option>
+            <option value="2013-06-02">02-06-2013</option>
+            <option value="2013-06-03">03-06-2013</option>
+            <option value="2013-06-04">04-06-2013</option>
+            <option value="2013-06-05">05-06-2013</option>
+            <option value="2013-06-06">06-06-2013</option>
+         </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Proses</td>
+        <td>:</td>
+        <td>
+        <input type="submit" id="submit" name="submit" value="Cek">
+        </td>
+    </tr>
+</table>
+</form>
+<hr>
+<div id="result">
+ 
+</div>
+</body>
+</html>

@@ -27,5 +27,7 @@
 <!-- /footer -->
 test
 
+<!-- jquery -->
+<script src="js/jquery-1.10.1.js"></script>
 </body>
 </html>
